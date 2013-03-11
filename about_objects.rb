@@ -44,13 +44,15 @@ class AboutObjects < EdgeCase::Koan
 
     # THINK ABOUT IT:
     # What pattern do the object IDs for small integers follow?
+
+    # Looks like it's 2n+1.
   end
 
   def test_clone_creates_a_different_object
     obj = Object.new
     copy = obj.clone
 
-    assert_equal __, obj           != copy
-    assert_equal __, obj.object_id != copy.object_id
+    assert_equal true, obj           != copy
+    assert_equal true, obj.object_id != copy.object_id
   end
 end
